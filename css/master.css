@@ -1,0 +1,95 @@
+/* CSS */
+
+* {
+      font-family: 'Fira Sans', sans-serif;
+}
+/* all text is Fira Sans font */
+
+body {
+      margin-left: 5%;
+      margin-right: 5%;
+}
+/* overall margins */
+
+section {
+      clear: both;
+}
+
+h1 {
+      font-size: xx-large;
+      text-align: center;
+}
+/* big header, only used for name */
+
+h2 {
+      font-size: x-large;
+}
+/* header level 2 */
+
+h3 {
+      font-size: large;
+}
+/* smaller header, probably not used */
+
+#profile-pic {
+      display: block;
+      border-radius: 50%;
+      height: 15%;
+      width: 15%;
+      margin: auto;
+      margin-bottom: 3%;
+}
+/* css for how the pic is displayed */
+
+.clearfix:after {
+      content: "";
+      display: block;
+      clear: both;
+}
+/* clearfix */
+
+.oneliners {
+      text-align: center;
+}
+/* one line quotes and shit */
+
+.details {
+      display: block;
+      margin-left: 20%;
+      margin-right: 20%;
+}
+/* for the longer text */
+
+.line {
+      display: block;
+      width: 100%;
+      height: 2px;
+      margin: auto;
+      margin-top: 3%;
+      background: black;
+}
+/* a simple separator */
+
+.logo {
+      height: 4%;
+      width: 4%;
+      border-radius: 50%;
+}
+/* sets size of logo */
+
+.header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #fff;
+      padding-top: 2%;
+}
+/* properties for footer */
+
+.subtext {
+      font-weight: 100;
+      position: relative;
+      opacity: 0.75;
+      font-size: 75%;
+}
+/* for text that shouldn't be super visible */
