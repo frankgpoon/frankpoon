@@ -34,8 +34,8 @@ h3 {
 #profile-pic {
       display: block;
       border-radius: 50%;
-      height: 15%;
-      width: 15%;
+      height: 384px;
+      width: 384px;
       margin: auto;
       margin-bottom: 3%;
 }
@@ -71,8 +71,8 @@ h3 {
 /* a simple separator */
 
 .logo {
-      height: 4%;
-      width: 4%;
+      height: 64px;
+      width: 64px;
       border-radius: 50%;
 }
 /* sets size of logo */
@@ -93,3 +93,12 @@ h3 {
       font-size: 75%;
 }
 /* for text that shouldn't be super visible */
+
+a.anchor {
+      display: block;
+      position: relative;
+      visibility: hidden;
+      padding-top: 10%;
+      margin-top: -8%;
+}
+/* fix for wrong anchors */
