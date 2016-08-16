@@ -19,27 +19,23 @@ h1 {
       font-size: xx-large;
       text-align: center;
 }
-/* big header, only used for name */
+/* big heading, used for name */
 
 h2 {
       font-size: x-large;
 }
-/* header level 2 */
+/* heading level 2, most sections use this */
 
 h3 {
       font-size: large;
 }
-/* smaller header, probably not used */
+/* smaller heading, probably not used */
 
-#profile-pic {
-      display: block;
-      border-radius: 50%;
-      height: 384px;
-      width: 384px;
-      margin: auto;
-      margin-bottom: 3%;
+a, a:link, a:hover, a:active {
+      text-decoration: none;
+      color: #369;
 }
-/* css for how the pic is displayed */
+/* links don't look like shit */
 
 .clearfix:after {
       content: "";
@@ -47,6 +43,14 @@ h3 {
       clear: both;
 }
 /* clearfix */
+
+.navbar-list {
+      list-style: none;
+      font-size: x-large;
+      float: left;
+      margin-left: 64px;
+}
+/* makes header links look nice */
 
 .oneliners {
       text-align: center;
@@ -102,3 +106,21 @@ a.anchor {
       margin-top: -8%;
 }
 /* fix for wrong anchors */
+
+a.navbar-links {
+      color: black;
+}
+
+#nav-logo {
+      float: left;
+}
+
+#profile-pic {
+      display: block;
+      border-radius: 50%;
+      height: 384px;
+      width: 384px;
+      margin: auto;
+      margin-bottom: 3%;
+}
+/* css for how the pic is displayed */
