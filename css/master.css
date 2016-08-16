@@ -46,7 +46,7 @@ a, a:link, a:hover, a:active {
 
 .navbar-list {
       list-style: none;
-      font-size: x-large;
+      font-size: large;
       float: left;
       margin-left: 64px;
 }
