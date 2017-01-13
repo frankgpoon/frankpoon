@@ -1,131 +1,154 @@
 /* CSS */
 
-* {
-      font-family: 'Fira Sans', sans-serif;
-}
-/* all text is Fira Sans font */
 
-body {
-      margin-left: 5%;
-      margin-right: 5%;
+/* all text is Fira Sans font, with #444 as color */
+* {
+    font-family: 'Fira Sans', sans-serif;
+    color: #444;
 }
+
 /* overall margins */
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+}
 
 section {
-      clear: both;
+    clear: both;
 }
 
-h1 {
-      font-size: xx-large;
-      text-align: center;
-}
 /* big heading, used for name */
-
-h2 {
-      font-size: x-large;
+h1 {
+    font-size: xx-large;
+    text-align: center;
 }
+
 /* heading level 2, most sections use this */
-
-h3 {
-      font-size: large;
+h2 {
+    font-size: x-large;
 }
+
 /* smaller heading, probably not used */
-
-a, a:link, a:active {
-      text-decoration: none;
-      color: #369;
+h3 {
+    font-size: large;
 }
+
 /* links don't look like shit */
+a, a:link, a:active {
+    text-decoration: none;
+    color: #369;
+}
 
 a:hover {
-      text-decoration: underline;
-      color: #369;
+    text-decoration: underline;
+    color: #369;
 }
 
-.clearfix:after {
-      content: "";
-      display: block;
-      clear: both;
+img {
+    border-radius: 50%;
 }
+
 /* clearfix */
-
-.navbar-list {
-      list-style: none;
-      font-size: large;
-      float: left;
-      margin-left: 64px;
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
 }
+
 /* makes header links look nice */
-
-.oneliners {
-      text-align: center;
+.navbar-list {
+    list-style: none;
+    font-size: large;
+    float: left;
+    margin-left: 64px;
 }
+
 /* one line quotes and shit */
-
-.details {
-      display: block;
-      margin-left: 20%;
-      margin-right: 20%;
+.oneliners {
+    font-size: large;
+    text-align: center;
 }
+
 /* for the longer text */
-
-.line {
-      display: block;
-      width: 100%;
-      height: 2px;
-      margin: auto;
-      margin-top: 3%;
-      background: black;
+.details {
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
 }
+
+/* a simple way to split a div into 3 separate sections */
+.column {
+    width: 33%;
+}
+
+.column-picture {
+    display: block;
+    height: 192px;
+    width: 192px;
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.column-title {
+    text-align: center;
+}
+
 /* a simple separator */
-
-.logo {
-      height: 64px;
-      width: 64px;
-      border-radius: 50%;
+.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: auto;
+    margin-top: 3%;
+    background: #444;
 }
+
 /* sets size of logo */
-
-.header {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: #fff;
-      padding-top: 2%;
+.logo {
+    height: 64px;
+    width: 64px;
 }
+
 /* properties for header */
-
-.subtext {
-      font-weight: 100;
-      position: relative;
-      opacity: 0.75;
-      font-size: 75%;
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 2%;
+    background-color: #fff;
 }
+
 /* for text that shouldn't be super visible */
-
-a.anchor {
-      display: block;
-      position: relative;
-      visibility: hidden;
-      padding-top: 10%;
-      margin-top: -8%;
+.subtext {
+    font-weight: 100;
+    position: relative;
+    opacity: 0.75;
+    font-size: 75%;
 }
+
 /* fix for wrong anchors */
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+    padding-top: 10%;
+    margin-top: -8%;
+}
 
 a.navbar-links {
-      color: black;
+    color: black;
 }
 
 #nav-logo {
-      float: left;
+    float: left;
 }
 
-#profile-pic {
-      display: block;
-      border-radius: 50%;
-      height: 384px;
-      width: 384px;
-      margin: auto;
-      margin-bottom: 3%;
-}
 /* css for how the pic is displayed */
+#profile-pic {
+    display: block;
+    height: 384px;
+    width: 384px;
+    margin: auto;
+    margin-bottom: 3%;
+}
