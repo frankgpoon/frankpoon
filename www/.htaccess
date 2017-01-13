@@ -1,0 +1,4 @@
+ErrorDocument 404 /404.html
+
+Redirect 301 /stylecheck http://stylecheck.frankpoon.com/
+Redirect 301 /blog http://blog.frankpoon.com/

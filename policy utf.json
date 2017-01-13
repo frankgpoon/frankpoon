@@ -1,0 +1,10 @@
+﻿{ "expiration": "2018-01-01T12:00:00.000Z",
+  "conditions": [
+    {"acl": "private" },
+    {"bucket": "stylecheck" },
+    {"success_action_redirect": "http://stylecheck.frankpoon.com/success.html"}
+    ["starts-with", "$key", "uploads/"],
+    ["starts-with", "$Content-Type", "text/plain"],
+    ["content-length-range", 0, 10240]
+  ]
+}
