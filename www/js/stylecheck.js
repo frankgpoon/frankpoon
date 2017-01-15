@@ -1,94 +1,10 @@
-// IN PROGRESS:
-// DONE: lineLength, nameCheck, booleanZenCheck, encapsulation
-// TODO: OUTPUT TO HTML, DOCUMENTATION, encapsulation, headers (hard): parameters/returns/pre-post/no implementations, shitty if/else, shitty loops, no spaces between operators
-// TOO HARD: extra data structures, anything regarding specfication, Java naming conventions
-//
-
-function styleCheck() {
-    var file = document.getElementById('file').files[0];
-    var fileName = file.name;
-    var fileSize = file.size;
-    if (fileName.substring(fileName.length - 5) !== '.java') {
-        alert('The file uploaded must have the extension .java');
-    } else if (fileSize > 16384) {
-        alert('The file uploaded is over 16kb');
-    } else {
-        var name = fileName.substring(0, fileName.length - 5);
-        var reader = new FileReader();
-        reader.readAsText(file);
-
-        reader.onload = function(progressEvent) {
-            var lines = this.result.split('\n');
-            var errors = [];
-
-            var classIndex = classNameCheck(lines, errors, name);
-
-            encapsulationCheck(lines, errors, classIndex);
-
-            lineLengthCheck(lines, errors);
-
-            booleanZenCheck(lines, errors);
-
-            var output = printErrors(errors, fileName);
-
-            alert(output); //how to implement into html?
-        };
-    }
-};
-
-function printErrors(errors, fileName) {
-    var str = 'File ' + fileName + ': ' + errors.length + ' errors\n';
-    for (var i = 0; i < errors.length; i++) {
-        str = str + errors[i] + '\n';
-    }
-    return str;
-};
-
-function lineLengthCheck(lines, errors) {
-    for (var i = 0; i < lines.length; i++) {
-        if (lines[i].length >= 100) {
-            errors.push('Line length was over 100 characters at line ' + (i + 1));
-        }
-    }
-};
-
-function classNameCheck(lines, errors, name) {
-    for (var i = 0; i < lines.length; i++) {
-        if (lines[i].includes('public interface') || lines[i].includes('public class')) {
-            if (!lines[i].includes(name)) {
-                errors.push('File name was different from class or interface name');
-            }
-            if (lines[i].includes('interface')) {
-                return -1;
-            } else {
-                return i;
-            }
-        }
-    }
-    errors.push('File name was different from class or interface name');
-};
-
-function encapsulationCheck(lines, errors, classIndex) {
-    if (classIndex !== -1) {
-        var i = 0;
-        while (!lines[i].includes('(')) {
-            if (lines[i].includes(';')
-                && (!lines[i].includes('private')
-                    && !lines[i].includes('public static final')
-                    && !lines[i].includes('/'))) {
-                errors.push('Bad encapsulation at line ' + (i + 1));
-            }
-            i++;
-        }
-    }
-}
-
-function booleanZenCheck(lines, errors) {
-    for (var i = 0; i < lines.length; i++) {
-        if (lines[i].includes('== true') || lines[i].includes('return true;')
-        || lines[i].includes('!= true') || lines[i].includes('== false')
-        || lines[i].includes('return false;') || lines[i].includes('!= false')) {
-            errors.push('Bad boolean zen at line ' + (i + 1));
-        }
-    }
-};
+function styleCheck(){var e=document.getElementById("file").files[0],n=e.name,l=e.size
+if(".java"!==n.substring(n.length-5))alert("The file uploaded should have the extension .java")
+else if(l>16384)alert("The file uploaded should be under 16kb")
+else{var t=n.substring(0,n.length-5),i=new FileReader
+i.readAsText(e),i.onload=function(e){var l=i.result.split("\n"),a=[],c=0
+document.getElementById("name").checked&&(c=nameCheck(l,a,t)),document.getElementById("encapsulation").checked&&encapsulationCheck(l,a,c),document.getElementById("linelength").checked&&lineLengthCheck(l,a),document.getElementById("booleanzen").checked&&booleanZenCheck(l,a)
+var r=printErrors(a,n,"<br>")
+document.getElementById("log").innerHTML=r}}}function printErrors(e,n,l){for(var t="File "+n+": "+e.length+" errors"+l+l,i=0;i<e.length;i++)t=t+e[i]+l
+return t}function lineLengthCheck(e,n){for(var l=0;l<e.length;l++)e[l].length>=100&&n.push("Line length was over 100 characters at line "+(l+1))}function nameCheck(e,n,l){for(var t=0;t<e.length;t++)if(e[t].includes("public interface")||e[t].includes("public class"))return e[t].includes(l)||n.push("File name was different from class or interface name"),e[t].includes("interface")?-1:t
+n.push("File name was different from class or interface name")}function encapsulationCheck(e,n,l){if(-1!==l)for(var t=l;!e[t].includes("(");)!e[t].includes(";")||e[t].includes("private")||e[t].includes("public static final")||e[t].includes("/")||e[t].includes("import")||n.push("Bad encapsulation at line "+(t+1)),t++}function booleanZenCheck(e,n){for(var l=0;l<e.length;l++)(e[l].includes("== true")||e[l].includes("return true;")||e[l].includes("!= true")||e[l].includes("== false")||e[l].includes("return false;")||e[l].includes("!= false"))&&n.push("Bad boolean zen at line "+(l+1))}

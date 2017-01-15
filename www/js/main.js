@@ -1,11 +1,5 @@
 //THIS SHIT IS A MESS
 
-function goBack() {
-    if (document.referrer = "") {
-        history.back();
-    }
-}
-
 $(document).ready(function(){
     //STRAIGHT COPIED FROM W3 SCHOOLS IM SORRY
     $('a[href*="#"]:not([href="#"])').on('click', function(event) {

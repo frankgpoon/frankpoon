@@ -1,9 +1,1 @@
 ErrorDocument 404 /404.html
-
-Redirect 301 /stylecheck http://stylecheck.frankpoon.com
-Redirect 301 /blog http://blog.frankpoon.com
-
-<IfModule mod_alias.c>
-	RedirectMatch 301 ^//(.*)$ http://stylecheck.frankpoon.com/$1
-    RedirectMatch 301 ^//(.*)$ http://blog.frankpoon.com/$1
-</IfModule>

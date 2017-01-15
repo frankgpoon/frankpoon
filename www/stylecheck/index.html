@@ -24,6 +24,7 @@
                 <li class="navbar-list"><a class="navbar-links" href="#top">StyleCheck</a></li>
                 <li class="navbar-list"><a class="navbar-links" href="#instructions">Instructions</a></li>
                 <li class="navbar-list"><a class="navbar-links" href="#upload">Upload</a></li>
+                <li class="navbar-list"><a class="navbar-links" href="#output">Output</a></li>
                 <li class="navbar-list">|</li>
                 <li class="navbar-list"><a class="navbar-links" href="http://frankpoon.com">Home</a></li>
                 <li class="navbar-list"><a class="navbar-links" href="http://frankpoon.com/blog/">Blog</a></li>
@@ -35,7 +36,8 @@
         <section>
             <img id="center-pic" src="http://frankpoon.com/res/stylecheck.jpg" alt="StyleCheck">
             <h1>StyleCheck</h1>
-            <p class="oneliners">(In progress!)</p>
+            <p class="oneliners">(in progress!)</p>
+            <p class="oneliners">Version 0.1</p>
         </section>
 
         <div class="line"></div>
@@ -43,7 +45,9 @@
         <section class="details">
             <a id="instructions" class="anchor"></a>
             <h2>Instructions</h2>
-            <p>The StyleCheck tool is meant to check for internal correctness as defined by the University of Washington Department of Computer Science and Engineering. </p>
+            <p>The StyleCheck tool is meant to check for internal correctness as defined by the University of Washington Department of Computer Science and Engineering. This tool does not guarantee full style points. Use at your own risk. I take no responsibility for points lost through using this tool.</p>
+            <p>Before uploading your source code, make sure it compiles. It should be have the extension .java and be under 16kb. You can choose what style errors you want specifically to check. Current supported errors are: Name Consistency, Encapsulation, Line Length, and Boolean Zen.</p>
+            <p>I will be updating this tool with more features when I have time.</p>
         </section>
 
         <div class="line"></div>
@@ -51,12 +55,28 @@
         <section class="details">
             <a id="upload" class="anchor"></a>
             <h2>Upload</h2>
-            <form id="form" action="output.html" onsubmit="styleCheck()" enctype="multipart/form-data" method="post">
+            <form id="form" onsubmit="return false" enctype="multipart/form-data" method="post">
                 <p>Upload your source code...</p>
                 <input id="file" name="file" type="file">
-                <p>Make sure your code compiles before submitting!</p>
-                <input type="submit" value="Check Style">
+                <p>Check and return style errors in:</p>
+                <input type="checkbox" name="name" value="name" id="name" checked="true"><label for="name">Name Consistency</label>
+                <p></p>
+                <input type="checkbox" name="encapsulation" value="encapsulation" id="encapsulation" checked="true"><label for="encapsulation">Encapsulation</label>
+                <p></p>
+                <input type="checkbox" name="linelength" value="linelength" id="linelength" checked="true"><label for="linelength">Line Length</label>
+                <p></p>
+                <input type="checkbox" name="booleanzen" value="booleanzen" id="booleanzen" checked="true"><label for="booleanzen">Boolean Zen</label>
+                <p></p>
+                <input type="submit" onclick="styleCheck()" value="Check Style">
             </form>
+        </section>
+
+        <div class="line"></div>
+
+        <section class="details">
+            <a id="output" class="anchor"></a>
+            <h2>Output</h2>
+            <p id="log"></p>
         </section>
     </div>
 </body>
