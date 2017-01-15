@@ -9,6 +9,7 @@
     <link rel="shortcut icon" href="http://frankpoon.com/res/favicon.ico">
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="http://frankpoon.com/js/main.js"></script>
+    <script src="http://frankpoon.com/js/stylecheck.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 
@@ -16,7 +17,7 @@
     <a id="top" class="anchor"></a>
 
     <div class="header">
-        <img class="logo" id="nav-logo" src="res/logo.png" alt="Logo">
+        <img class="logo" id="nav-logo" src="http://frankpoon.com/res/logo.png" alt="Logo">
 
         <div style="float: left">
             <ul>
@@ -50,21 +51,13 @@
         <section class="details">
             <a id="upload" class="anchor"></a>
             <h2>Upload</h2>
-            <form action="https://stylecheck.s3.amazonaws.com/" method="post" enctype="multipart/form-data">
-                <input type="hidden" name="key" value="uploads/${filename}">
-                <input type="hidden" name="AWSAccessKeyId" value="AKIAJ4OE32T45QLGPA7A">
-                <input type="hidden" name="acl" value="private">
-                <input type="hidden" name="success_action_redirect" value="success.html">
-                <input type="hidden" name="policy" value="77u/eyAiZXhwaXJhdGlvbiI6ICIyMDE4LTAxLTAxVDEyOjAwOjAwLjAwMFoiLA0KICAiY29uZGl0aW9ucyI6IFsNCiAgICB7ImFjbCI6ICJwcml2YXRlIiB9LA0KICAgIHsiYnVja2V0IjogInN0eWxlY2hlY2siIH0sDQogICAgeyJzdWNjZXNzX2FjdGlvbl9yZWRpcmVjdCI6ICJodHRwOi8vc3R5bGVjaGVjay5mcmFua3Bvb24uY29tL3N1Y2Nlc3MuaHRtbCJ9DQogICAgWyJzdGFydHMtd2l0aCIsICIka2V5IiwgInVwbG9hZHMvIl0sDQogICAgWyJzdGFydHMtd2l0aCIsICIkQ29udGVudC1UeXBlIiwgInRleHQvcGxhaW4iXSwNCiAgICBbImNvbnRlbnQtbGVuZ3RoLXJhbmdlIiwgMCwgMTAyNDBdDQogIF0NCn0NCg==">
-                <input type="hidden" name="signature" value="c748979711d655a5f0151c30270ee8f2b477d1e942faeb9718d4e1517d2d4162">
-                <input type="hidden" name="Content-Type" value="text/plain">
-                <p>Upload a file...</p>
-                <input name="file" type="file">
+            <form id="form" action="output.html" onsubmit="styleCheck()" enctype="multipart/form-data" method="post">
+                <p>Upload your source code...</p>
+                <input id="file" name="file" type="file">
                 <p>Make sure your code compiles before submitting!</p>
-                <input type="submit" value="Upload File to S3">
+                <input type="submit" value="Check Style">
             </form>
         </section>
-
     </div>
 </body>
 
