@@ -11,7 +11,7 @@
  * shitty loops; no spaces between operators
  *
  * @author Frank Poon <mail@frankpoon.com>
- * @version 0.1
+ * @version 0.1.1
  */
 
 /**
@@ -124,8 +124,7 @@ function encapsulationCheck(lines, errors, classIndex) {
         while (!lines[i].includes('(')) {
             if (lines[i].includes(';')
                 && (!lines[i].includes('private')
-                    && !lines[i].includes('public static final')
-                    && !lines[i].includes('/'))
+                    && !lines[i].includes('public static final'))
                     && !lines[i].includes('import')) {
                 errors.push('Bad encapsulation at line ' + (i + 1));
             }
@@ -142,9 +141,8 @@ function encapsulationCheck(lines, errors, classIndex) {
  */
 function booleanZenCheck(lines, errors) {
     for (var i = 0; i < lines.length; i++) {
-        if (lines[i].includes('== true') || lines[i].includes('return true;')
-        || lines[i].includes('!= true') || lines[i].includes('== false')
-        || lines[i].includes('return false;') || lines[i].includes('!= false')) {
+        if (lines[i].includes('== true') || lines[i].includes('!= true')
+        || lines[i].includes('== false') || lines[i].includes('!= false')) {
             errors.push('Bad boolean zen at line ' + (i + 1));
         }
     }
