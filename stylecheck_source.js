@@ -11,7 +11,7 @@
  * shitty loops; no spaces between operators
  *
  * @author Frank Poon <mail@frankpoon.com>
- * @version 0.1.1
+ * @version 0.1.2
  */
 
 /**
@@ -39,9 +39,8 @@ function styleCheck() {
             var errors = [];
             var classIndex = 0;
 
-            if (document.getElementById('name').checked) {
-                classIndex = nameCheck(lines, errors, name);
-            }
+            classIndex = nameCheck(lines, errors, name, document.getElementById('name').checked);
+
             if (document.getElementById('encapsulation').checked) {
                 encapsulationCheck(lines, errors, classIndex);
             }
@@ -95,10 +94,10 @@ function lineLengthCheck(lines, errors) {
  * @param {string} name - the name of the class
  * @return {int} the location of the line "public class", useful for checking encapsulation
  */
-function nameCheck(lines, errors, name) {
+function nameCheck(lines, errors, name, checked) {
     for (var i = 0; i < lines.length; i++) {
         if (lines[i].includes('public interface') || lines[i].includes('public class')) {
-            if (!lines[i].includes(name)) {
+            if (!lines[i].includes(name) && checked) {
                 errors.push('File name was different from class or interface name');
             }
             if (lines[i].includes('interface')) {
