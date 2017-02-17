@@ -1,11 +1,15 @@
-//version 0.1.2
-function styleCheck(){var e=document.getElementById("file").files[0],n=e.name,l=e.size
-if(".java"!==n.substring(n.length-5))alert("The file uploaded should have the extension .java")
-else if(l>16384)alert("The file uploaded should be under 16kb")
-else{var t=n.substring(0,n.length-5),i=new FileReader
-i.readAsText(e),i.onload=function(e){var l=i.result.split("\n"),a=[],c=0
-c=nameCheck(l,a,t,document.getElementById("name").checked),document.getElementById("encapsulation").checked&&encapsulationCheck(l,a,c),document.getElementById("linelength").checked&&lineLengthCheck(l,a),document.getElementById("booleanzen").checked&&booleanZenCheck(l,a)
-var r=printErrors(a,n,"<br>")
-document.getElementById("log").innerHTML=r}}}function printErrors(e,n,l){for(var t="File "+n+": "+e.length+" errors"+l+l,i=0;i<e.length;i++)t=t+e[i]+l
-return t}function lineLengthCheck(e,n){for(var l=0;l<e.length;l++)e[l].length>=100&&n.push("Line length was over 100 characters at line "+(l+1))}function nameCheck(e,n,l,t){for(var i=0;i<e.length;i++)if(e[i].includes("public interface")||e[i].includes("public class"))return!e[i].includes(l)&&t&&n.push("File name was different from class or interface name"),e[i].includes("interface")?-1:i
-n.push("File name was different from class or interface name")}function encapsulationCheck(e,n,l){if(-1!==l)for(var t=l;!e[t].includes("(");)!e[t].includes(";")||e[t].includes("private")||e[t].includes("public static final")||e[t].includes("import")||n.push("Bad encapsulation at line "+(t+1)),t++}function booleanZenCheck(e,n){for(var l=0;l<e.length;l++)(e[l].includes("== true")||e[l].includes("!= true")||e[l].includes("== false")||e[l].includes("!= false"))&&n.push("Bad boolean zen at line "+(l+1))}
+function styleCheck(){console.log("StyleCheck Version "+version+" - Debugging Log")
+var e=document.getElementById("file").files[0],n=e.name,l=e.size
+if(console.log("File successfully uploaded."),console.log("File name: "+n),console.log("File size: "+l),".java"!==n.substring(n.length-5))console.log("File uploaded is not detected to be a Java source file. StyleCheck will not run."),alert("The file uploaded should have the extension .java")
+else if(l>16384)console.log("File uploaded is over the 16kb limit. StyleCheck will not run."),alert("The file uploaded should be under 16kb")
+else{console.log("File uploaded has fulfilled all conditions. Running StyleCheck.")
+var o=n.substring(0,n.length-5),i=new FileReader
+i.readAsText(e),i.onload=function(e){var l=i.result.split("\n"),s=[],t=-2
+t=nameCheck(l,s,o,document.getElementById("name").checked),console.log(),document.getElementById("encapsulation").checked&&encapsulationCheck(l,s,t),document.getElementById("linelength").checked&&lineLengthCheck(l,s),document.getElementById("booleanzen").checked&&booleanZenCheck(l,s),document.getElementById("log").innerHTML=printInfo(s,n,"<br>",otherInfo)}}}function printInfo(e,n,l){console.log("Running printInfo..."),str=str+"File "+n+": ",0===e.length?str+="no errors":1===e.length?str+="1 error":str=str+e.length+" errors",str=str+l+l
+for(var o=0;o<e.length;o++)str=str+e[o]+l
+return str}function lineLengthCheck(e,n){console.log("Running lineLengthCheck...")
+for(var l=0;l<e.length;l++)e[l].length>=100&&(console.log("Error found"),n.push("Line length was over 100 characters at line "+(l+1)))}function nameCheck(e,n,l,o){console.log("Running nameCheck...")
+for(var i=0;i<e.length;i++)if(e[i].includes("public interface")||e[i].includes("public class"))return!e[i].includes(l)&&o?(console.log("Error found"),n.push("File name was different from class or interface name"),-2):e[i].includes("interface")?(console.log("File is an interface"),-1):(console.log("File is a class"),i)
+console.log("Error found"),n.push("File name was different from class or interface name")}function encapsulationCheck(e,n,l){if(console.log("Running encapsulationCheck..."),l>-1){console.log("File is a valid class.")
+for(var o=l;!e[o].includes("(");)!e[o].includes(";")||e[o].includes("private")||e[o].includes("public static final")||e[o].includes("import")||(console.log("Error found"),n.push("Bad encapsulation at line "+(o+1))),o++}else console.log("Skipping encapsulationCheck because file is an interface or not valid.")}function booleanZenCheck(e,n){console.log("Running booleanZenCheck...")
+for(var l=0;l<e.length;l++)(e[l].includes("== true")||e[l].includes("!= true")||e[l].includes("== false")||e[l].includes("!= false"))&&(console.log("Error found"),n.push("Bad boolean zen at line "+(l+1)))}var version="0.1.3"
