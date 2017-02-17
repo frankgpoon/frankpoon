@@ -77,7 +77,7 @@ function styleCheck() {
  */
 function printInfo(errors, fileName, newLineString) {
     console.log('Running printInfo...');
-    str = str + 'File ' + fileName + ': ';
+    str = 'File ' + fileName + ': ';
     if  (errors.length === 0) {
         str = str + 'no errors';
     } else if (errors.length === 1) {

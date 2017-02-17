@@ -5,7 +5,7 @@ else if(l>16384)console.log("File uploaded is over the 16kb limit. StyleCheck wi
 else{console.log("File uploaded has fulfilled all conditions. Running StyleCheck.")
 var o=n.substring(0,n.length-5),i=new FileReader
 i.readAsText(e),i.onload=function(e){var l=i.result.split("\n"),s=[],t=-2
-t=nameCheck(l,s,o,document.getElementById("name").checked),console.log(),document.getElementById("encapsulation").checked&&encapsulationCheck(l,s,t),document.getElementById("linelength").checked&&lineLengthCheck(l,s),document.getElementById("booleanzen").checked&&booleanZenCheck(l,s),document.getElementById("log").innerHTML=printInfo(s,n,"<br>")}}}function printInfo(e,n,l){console.log("Running printInfo..."),str=str+"File "+n+": ",0===e.length?str+="no errors":1===e.length?str+="1 error":str=str+e.length+" errors",str=str+l+l
+t=nameCheck(l,s,o,document.getElementById("name").checked),console.log(),document.getElementById("encapsulation").checked&&encapsulationCheck(l,s,t),document.getElementById("linelength").checked&&lineLengthCheck(l,s),document.getElementById("booleanzen").checked&&booleanZenCheck(l,s),document.getElementById("log").innerHTML=printInfo(s,n,"<br>")}}}function printInfo(e,n,l){console.log("Running printInfo..."),str="File "+n+": ",0===e.length?str+="no errors":1===e.length?str+="1 error":str=str+e.length+" errors",str=str+l+l
 for(var o=0;o<e.length;o++)str=str+e[o]+l
 return str}function lineLengthCheck(e,n){console.log("Running lineLengthCheck...")
 for(var l=0;l<e.length;l++)e[l].length>=100&&(console.log("Error found"),n.push("Line length was over 100 characters at line "+(l+1)))}function nameCheck(e,n,l,o){console.log("Running nameCheck...")
