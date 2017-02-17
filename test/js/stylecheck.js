@@ -63,7 +63,7 @@ function styleCheck() {
                 booleanZenCheck(lines, errors);
             }
 
-            document.getElementById('log').innerHTML = printInfo(errors, fileName, '<br>', otherInfo);
+            document.getElementById('log').innerHTML = printInfo(errors, fileName, '<br>');
         }
     }
 }
