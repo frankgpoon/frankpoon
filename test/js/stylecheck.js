@@ -51,7 +51,6 @@ function styleCheck() {
             var classIndex = -2;
 
             classIndex = nameCheck(lines, errors, name, document.getElementById('name').checked);
-            console.log();
 
             if (document.getElementById('encapsulation').checked) {
                 encapsulationCheck(lines, errors, classIndex);
