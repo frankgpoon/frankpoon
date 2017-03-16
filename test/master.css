@@ -1,0 +1,164 @@
+/* CSS */
+
+
+/* all text is Fira Sans font, with #444 as color */
+* {
+    font-family: 'Fira Sans', sans-serif;
+    color: #444;
+    font-size: 16px;
+}
+
+/* overall margins */
+body {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+section {
+    clear: both;
+}
+
+/* big heading, used for name */
+h1 {
+    font-size: 28px;
+    text-align: center;
+}
+
+/* heading level 2, most sections use this */
+h2 {
+    font-size: 24px;
+}
+
+/* smaller heading, probably not used */
+h3 {
+    font-size: 20px;
+}
+
+/* links don't look like shit */
+a, a:link, a:active {
+    text-decoration: none;
+    color: #369;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #369;
+}
+
+img {
+    border-radius: 50%;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+td {
+    vertical-align: top;
+}
+
+/* clearfix */
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* makes header links look nice */
+.navbar-list {
+    list-style: none;
+    float: left;
+    margin-left: 64px;
+}
+
+/* one line quotes and shit */
+.oneliners {
+    font-size: 20px;
+    text-align: center;
+}
+
+/* for the longer text */
+.details {
+    display: block;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* a simple way to split a div into 3 separate sections */
+.column {
+    width: 33%;
+}
+
+.column-picture {
+    display: block;
+    height: 192px;
+    width: 192px;
+    margin: auto;
+    margin-top: 15%;
+    margin-bottom: 15%;
+}
+
+.column-title {
+    text-align: center;
+}
+
+/* a simple separator */
+.line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    margin: auto;
+    margin-top: 3%;
+    background: #444;
+}
+
+/* sets size of logo */
+.logo {
+    height: 64px;
+    width: 64px;
+}
+
+/* properties for header */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding-top: 2%;
+    background-color: #fff;
+}
+
+/* for text that shouldn't be super visible */
+.subtext {
+    font-weight: 100;
+    position: relative;
+    opacity: 0.75;
+    font-size: 12px;
+}
+
+/* fix for wrong anchors */
+a.anchor {
+    display: block;
+    position: relative;
+    visibility: hidden;
+    padding-top: 10%;
+    margin-top: -8%;
+}
+
+a.navbar-links {
+    color: black;
+    font-size: 20px;
+}
+
+#nav-logo {
+    float: left;
+}
+
+/* css for how the pic is displayed */
+#center-pic {
+    display: block;
+    height: 30%;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 3%;
+}
