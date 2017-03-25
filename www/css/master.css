@@ -5,6 +5,7 @@
 * {
     font-family: 'Fira Sans', sans-serif;
     color: #444;
+    font-size: 16px;
 }
 
 /* overall margins */
@@ -19,18 +20,18 @@ section {
 
 /* big heading, used for name */
 h1 {
-    font-size: xx-large;
+    font-size: 28px;
     text-align: center;
 }
 
 /* heading level 2, most sections use this */
 h2 {
-    font-size: x-large;
+    font-size: 24px;
 }
 
 /* smaller heading, probably not used */
 h3 {
-    font-size: large;
+    font-size: 20px;
 }
 
 /* links don't look like shit */
@@ -67,14 +68,13 @@ td {
 /* makes header links look nice */
 .navbar-list {
     list-style: none;
-    font-size: large;
     float: left;
     margin-left: 64px;
 }
 
 /* one line quotes and shit */
 .oneliners {
-    font-size: large;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -133,7 +133,7 @@ td {
     font-weight: 100;
     position: relative;
     opacity: 0.75;
-    font-size: 75%;
+    font-size: 12px;
 }
 
 /* fix for wrong anchors */
@@ -147,6 +147,7 @@ a.anchor {
 
 a.navbar-links {
     color: black;
+    font-size: 20px;
 }
 
 #nav-logo {
@@ -156,8 +157,8 @@ a.navbar-links {
 /* css for how the pic is displayed */
 #center-pic {
     display: block;
-    height: 384px;
-    width: 384px;
+    height: 30%;
+    width: 30%;
     margin: auto;
     margin-bottom: 3%;
 }
