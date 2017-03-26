@@ -92,8 +92,8 @@ td {
 
 .column-picture {
     display: block;
-    height: 192px;
-    width: 192px;
+    height: 12em;
+    width: 12em;
     margin: auto;
     margin-top: 15%;
     margin-bottom: 15%;
