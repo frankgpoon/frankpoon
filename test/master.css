@@ -4,8 +4,8 @@
 /* all text is Roboto font, with #444 as color */
 * {
     font-family: 'Roboto', sans-serif;
+    font-size: 100%;
     color: #444;
-    font-size: 16px;
 }
 
 /* overall margins */
@@ -20,18 +20,18 @@ section {
 
 /* big heading, used for name */
 h1 {
-    font-size: 28px;
     text-align: center;
+    font-size: 2em;
 }
 
 /* heading level 2, most sections use this */
 h2 {
-    font-size: 24px;
+    font-size: 1.5em;
 }
 
 /* smaller heading, probably not used */
 h3 {
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 /* links don't look like shit */
@@ -74,7 +74,7 @@ td {
 
 /* one line quotes and shit */
 .oneliners {
-    font-size: 20px;
+    font-size: 1.25em;
     text-align: center;
 }
 
@@ -130,10 +130,8 @@ td {
 
 /* for text that shouldn't be super visible */
 .subtext {
-    font-weight: 100;
     position: relative;
-    opacity: 0.75;
-    font-size: 12px;
+    font-size: 0.75em;
 }
 
 /* fix for wrong anchors */
@@ -147,7 +145,7 @@ a.anchor {
 
 a.navbar-links {
     color: black;
-    font-size: 20px;
+    font-size: 1.25em;
 }
 
 #nav-logo {
