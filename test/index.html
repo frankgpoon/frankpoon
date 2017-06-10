@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
     <script src="http://frankpoon.com/js/main.js"></script>
     <script src="stylecheck.js"></script>
+    <script src="psychcalc.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -18,8 +19,6 @@
     <a id="top" class="anchor"></a>
 
     <div class="header">
-        <img class="logo" id="nav-logo" src="http://frankpoon.com/res/logo.png" alt="Logo">
-
         <div style="float: left">
             <ul>
                 <li class="navbar-list"><a class="navbar-links" href="#top">Test</a></li>
@@ -71,13 +70,13 @@
                 <p>Upload your source code...</p>
                 <input id="file" name="file" type="file">
                 <p>Check and return style errors in:</p>
-                <input type="checkbox" name="name" value="name" id="name" checked="true"><label for="name">Name Consistency</label>
+                <input type="checkbox" id="name" checked="true"><label for="name">Name Consistency</label>
                 <p></p>
-                <input type="checkbox" name="encapsulation" value="encapsulation" id="encapsulation" checked="true"><label for="encapsulation">Encapsulation</label>
+                <input type="checkbox" id="encapsulation" checked="true"><label for="encapsulation">Encapsulation</label>
                 <p></p>
-                <input type="checkbox" name="linelength" value="linelength" id="linelength" checked="true"><label for="linelength">Line Length</label>
+                <input type="checkbox" id="lineLength" checked="true"><label for="lineLength">Line Length</label>
                 <p></p>
-                <input type="checkbox" name="booleanzen" value="booleanzen" id="booleanzen" checked="true"><label for="booleanzen">Boolean Zen</label>
+                <input type="checkbox" id="booleanZen" checked="true"><label for="booleanZen">Boolean Zen</label>
                 <p></p>
                 <input type="submit" onclick="styleCheck()" value="Check Style">
             </form>
@@ -89,6 +88,32 @@
             <a id="output" class="anchor"></a>
             <h2>Output</h2>
             <p id="log"></p>
+        </section>
+
+        <div class="line"></div>
+
+        <section class="details">
+            <a id="input" class="anchor"></a>
+            <h2>Calculator</h2>
+            <form id="scores" name="scores" onsubmit="return false" enctype="multipart/form-data" method="post">
+                <p>Enter one to calculate the other:</p>
+                <input type="number" min="0" max="40" name="exam3" id="exam3"><label for="exam3"> Exam 3 score</label>
+                <p></p>
+                <input type="number" step="0.1" min="0" max="4.0" name="grade" id="grade"><label for="grade"> Desired grade</label>
+                <p>Fill in all information except extra credit:</p>
+                <input type="number" min="0" max="40" name="exam1" id="exam1"><label for="exam1"> Exam 1 score</label></input>
+                <p></p>
+                <input type="number" min="0" max="40" name="exam2" id="exam2"><label for="exam2"> Exam 2 score</label>
+                <p></p>
+                <input type="number" min="0" max="12" name="moa" id="moa"><label for="moa"> Major Online Activity points</label>
+                <p></p>
+                <input type="number" min="0" max="13" name="polling" id="polling"><label for="polling"> Polling points</label>
+                <p></p>
+                <input type="number" step="0.1" min="0" max="0.3" name="extraCredit" id="extraCredit"><label for="extraCredit"> Extra credit GPA (optional)</label>
+                <p></p>
+                <input type="submit" onclick="psychCalc()" value="Calculate Grade">
+            </form>
+            <p id="result"></p>
         </section>
     </div>
 </body>

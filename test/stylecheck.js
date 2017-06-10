@@ -55,10 +55,10 @@ function styleCheck() {
             if (document.getElementById('encapsulation').checked) {
                 encapsulationCheck(lines, errors, classIndex);
             }
-            if (document.getElementById('linelength').checked) {
+            if (document.getElementById('lineLength').checked) {
                 lineLengthCheck(lines, errors);
             }
-            if (document.getElementById('booleanzen').checked) {
+            if (document.getElementById('booleanZen').checked) {
                 booleanZenCheck(lines, errors);
             }
 
