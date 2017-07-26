@@ -27,6 +27,10 @@ a:hover {
     color: #369;
 }
 
+form {
+    overflow: hidden;
+}
+
 /* most section titles */
 h1 {
     font-size: 2em;
@@ -38,6 +42,15 @@ h2 {
     font-size: 1.5em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
+}
+
+input {
+    float: right;
+    clear: both;
+}
+
+label {
+    display: inline-block;
 }
 
 section {
