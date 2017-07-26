@@ -1,8 +1,8 @@
-# website-stylecheck - Frank Poon's personal website (frankpoon.com) + StyleCheck
+# Website - Frank Poon's personal website
 
 ## frankpoon.com
 
-My website. Uses mostly HTML and CSS for styling. A small amount of JQuery (nowhere near enough to say I know it) for smooth scrolling.
+My website. Uses only HTML and CSS, no frameworks. Minimal.
 
 ### Includes:
 
@@ -13,7 +13,3 @@ Has 3 sections: about, projects, and contact
 ### 404.html
 
 404 page.
-
-## StyleCheck
-
-A tool completely built in JavaScript with a HTML frontend. Users upload a Java source file and StyleCheck checks the file for any "style errors" (basically hard to read or inefficient code) and lists each error as output. More information about StyleCheck, especially about its implementation and features, can be found in its source file (stylecheck_source.js).
