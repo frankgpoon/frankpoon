@@ -18,13 +18,7 @@ Has 3 sections: about, projects, and contact
 
 ## Features Needed
 
-- LAMP stack
-
-- FTP
-
 - Mail server
-
-- SSL
 
 ## Future Ideas
 
