@@ -13,3 +13,25 @@ Has 3 sections: about, projects, and contact
 ### 404.html
 
 404 page.
+
+# Migration to VPS
+
+## Features Needed
+
+- LAMP stack
+
+- FTP
+
+- Mail server
+
+- SSL
+
+## Future Ideas
+
+- VPN
+
+- Minecraft
+
+- Bot
+
+- Test server
