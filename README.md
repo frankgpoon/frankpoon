@@ -18,7 +18,7 @@ Has 3 sections: about, projects, and contact
 
 ## Features Needed
 
-- Mail server
+~~- Mail server~~ Too hard
 
 ## Future Ideas
 
