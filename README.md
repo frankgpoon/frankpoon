@@ -2,25 +2,23 @@
 
 ## frankpoon.com
 
-My website. Uses only HTML and CSS, no frameworks. Minimal.
+My website. Uses only HTML and CSS with Bootstrap so it works well with mobile. Minimal.
 
 ### Includes:
 
 ### index.html
 
-Has 3 sections: about, projects, and contact
+Has 3 sections: about, stuff, and contact
 
 ### 404.html
 
 404 page.
 
-# Migration to VPS
+### fsb.html
 
-## Features Needed
+Page describing Flashcard Study Buddy.
 
-~~- Mail server~~ Too hard
-
-## Future Ideas
+# Future Ideas with Hosted VPS
 
 - VPN
 
