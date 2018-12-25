@@ -1,22 +1,6 @@
-# Website - Frank Poon's personal website
+# frankpoon - Personal Repository
 
-## frankpoon.com
-
-My website. Uses only HTML and CSS with Bootstrap so it works well with mobile. Minimal.
-
-### Includes:
-
-### index.html
-
-Has 3 sections: about, stuff, and contact
-
-### 404.html
-
-404 page.
-
-### fsb.html
-
-Page describing Flashcard Study Buddy.
+Includes resume, image of signature , and files for https://frankpoon.com.
 
 # Future Ideas with Hosted VPS
 
