@@ -1,0 +1,46 @@
+﻿Frank Poon
++1 626.757.7872 • frankgpoon@gmail.com
+github.com/frankgpoon • linkedin.com/in/frankgpoon • frankpoon.com
+
+Education:
+
+University of Washington • Graduation Expected June 2020
+B.S Computer Science • Seattle, Washington, USA
+In-Major GPA: 3.81/4.00 • Awards: Dean’s List (5 quarters)
+Relevant Coursework: Software Design, Data Structures/Algorithms, Linear Algebra, Differential Equations, Discrete Math, Hardware Systems
+
+
+Experience:
+
+Choco Communications GmbH • Growth Engineering Intern
+Summer 2018 • Berlin, Germany • choco.app
+• Choco is a business to business app for the food service industry with a centralized platform for restaurants to find and order goods from suppliers
+• Wrote a framework with microservice modules to automate workflow with our app from restaurant to supplier via secondary formats like PDF/fax and SMS
+• Integrated and sorted analytics from our service with our sales channel via Slack to ensure smooth operations and stability
+• Created an automated bot to help with basic customer support and onboarding/tutorial for new users
+
+Projects:
+
+snrl (Simple Data Relaying Web Service) • In Progress
+Spring 2018 - Present • github.com/frankgpoon/snrl-service
+• Users add their own devices to a private network where they can share data; functionality can be similar to Pushbullet or Continuity
+• Uses custom protocol focused on simplicity for using time sensitive tokens for painless authentication between devices with no login or signup system
+• Built on Spring Framework for the API backend, with flexibility and documentation for front ends (mobile, web, etc)
+
+You Are Not Alone (Dynamic “Message Board” Webapp)
+Fall 2017 • github.com/frankgpoon/youarenotalone
+• Dynamic webapp built at DubHacks that allows people to post real-time anonymous messages, separated by different topics
+• Uses Google Cloud Functions (extends Express and node.js) on Firebase, with Firebase Realtime Database (modeled on NoSQL) for data storage
+• Implemented jQuery to communicate between a HTML/CSS frontend and the backend functions
+
+Flashcard Study Buddy (Voice-Controlled Google Assistant App)
+Summer 2017 • frankpoon.com/fsb
+• Voice-controlled app for Google Assistant, using Google’s NLP engine (DialogFlow), that allows users to search for their Quizlet flash cards and test themselves verbally on them
+• Implements OAuth 2.0 support for users in order to help them easily find their requested flash cards on the Quizlet API
+• Built with Google Cloud Functions for webhook and hosted on Firebase
+
+Skills:
+
+Back End: Java, node.js, NoSQL, RESTful APIs, Express, SQL, Spring Framework
+Front End: JavaScript, HTML, CSS, React, Bootstrap
+Miscellaneous: git, bash, OAuth, DialogFlow, Firebase, unit testing, Google Cloud, specification, MVC
