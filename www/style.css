@@ -11,3 +11,7 @@ a:hover {
     padding-bottom: 1em;
     padding-top: 1em;
 }
+
+h1 {
+    text-transform: uppercase;
+}
