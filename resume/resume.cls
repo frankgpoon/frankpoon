@@ -72,9 +72,9 @@
 \renewcommand{\section}
 {
   \@startsection {section}{1}{\z@}
+  {3pt}
   {6pt}
-  {6pt}
-  {\normalfont\LARGE}
+  {\normalfont\Large}
 }
     
 % Overview is a preset itemize that works well with projects/jobs
@@ -87,26 +87,31 @@
   \end{itemize}
 }
 
-% Adds a school
-% Usage: \school{institution}{degree}{timeframe}{location}{overview}
-\newcommand{\school}[5]
+% Adds an institution
+\newcommand{\institution}[2]{
+  \small \uppercase{#1} \smallskip \par
+
+  #2 \normalsize \medskip
+}
+
+% Adds a degree
+% Usage: \degree{name}{timeframe}{location}{overview}
+\newcommand{\degree}[4]
 {
-  \large \textbf{#1 \blt #2}
+  \large \textbf{#1}
+  \normalsize \textit{\blt #2 \blt #3}
 
-  \normalsize \textit{#3 \blt #4}
-
-  #5 \smallskip \par
+  #4 \smallskip
 }
       
 % Adds a job
-% Usage: \job{company}{position}{timeframe}{location}{website}{overview}
-\newcommand{\job}[6]
+% Usage: \job{position}{timeframe}{location}{website}{overview}
+\newcommand{\position}[6]
 {
-  \large \textbf{#1 \blt #2}
+  \large \textbf{#1}
+  \normalsize \textit{\blt #2 \blt #3 \blt \href{https://#4}{#4}}
 
-  \normalsize \textit{#3 \blt #4 \blt \href{https://#5}{#5}}
-
-  #6 \smallskip \par
+  #5 \smallskip
 }
 
 
@@ -115,8 +120,7 @@
 \newcommand{\project}[4]
 {
   \large \textbf{#1}
+  \normalsize \textit{\blt #2 \blt \href{https://#3}{#3}}
 
-  \normalsize \textit{#2 \blt \href{https://#3}{#3}}
-
-  #4 \smallskip \par
+  #4 \smallskip
 }

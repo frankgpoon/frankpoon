@@ -12,85 +12,99 @@
 
 \section{Education}
 
-\school
-{B.S. Computer Science}
-{University of Washington}
-{September 2016 - June 2020}
-{Seattle, Washington, USA}
-{\textbf{Cumulative GPA:} 3.63 \blt \textbf{Awards:} Dean's List (8 quarters)
-
-  \textbf{Relevant Coursework:} Software Design, Data Structures/Algorithms, 
-  Linear Algebra, Differential Equations, Discrete Math, Systems Programming,
-  Probability/Statistics, Machine Learning, Computer Architecture, Operating 
-  Systems, Computer Security
-
-  \textbf{Extracurriculars:} Pi Kappa Alpha Fraternity (Scholarship Chair), 
-  ACM (Member)
+\institution{University of Washington}{
+  \degree
+  {B.S. Computer Science}
+  {September 2016 - June 2020}
+  {Seattle, WA, USA}
+  {
+    \textbf{Cumulative GPA:} 3.59 \blt \textbf{Awards:} Dean's List (8 quarters) 
+  }
 }
 
 \section{Experience}
 
-\job
-{Software Development Engineer Intern}
-{Amazon Web Services, Inc.}
-{June 2019 - September 2019}
-{Seattle, Washington, USA}{aws.amazon.com/premiumsupport}
-{
-  AWS Support improves communication with customers about the availability 
-  and health of their AWS services.
-  \begin{overview}
-    \item Added integration with a new monitoring service into a REST API to 
-          increase failure mode coverage
-    \item Designed scalable solution to overcome data size limit, raising the 
-          maximum number of concurrent accounts retrieved from monitoring services 
-          per operation from 100 to over 10,000
-    \item Wrote unit and integration tests, along with integrated metrics and 
-          alarms for operations and monitoring
-  \end{overview}
+\institution{Amazon}{
+  \position
+  {Software Development Engineer}
+  {August 2020 - Present}
+  {Cambridge, MA, USA}{amazon.com}
+  {
+    % Alexa's Secure AI Foundations (SAIF) Platform makes Alexa ML data accessible 
+    % in a fast, secure, and scalable manner to internal modelers, data scientists, and engineers. 
+    \begin{overview}
+      \item Spearheaded organization-wide privacy mitigation effort, unblocking Alexa AI team by
+        enabling pseudonymized datasets with a differential privacy algorithm
+      \item Designed and implemented a security framework to SQL query critical Alexa AI data,
+        reducing average query times from 90 minutes to 30 seconds
+      \item Audited team deployment processes and led a refactoring effort, 
+        increasing CI/CD pipeline reliability from 40 to 90 percent
+    \end{overview}
+  }
+
+  \position
+  {SDE Intern}
+  {June 2019 - September 2019}
+  {Seattle, WA, USA}{aws.amazon.com/premiumsupport}
+  {
+    % AWS Support improves communication with customers about the availability 
+    % and health of their AWS services.
+    \begin{overview}
+      \item Added integration with a new monitoring service into a REST API to 
+        increase failure mode coverage
+      \item Designed scalable solution to overcome data size limit, raising the 
+        maximum number of concurrent accounts retrieved from monitoring services 
+        per operation from 100 to over 10,000
+      \item Wrote unit and integration tests, along with integrated metrics and 
+        alarms for operations and monitoring
+    \end{overview}
+  }
 }
 
-\job
-{CSE 331 Teaching Assistant}
-{University of Washington}
-{April 2019 - Present}
-{Seattle, Washington, USA}
-{courses.cs.washington.edu/courses/cse331/}
-{
-  CSE 331 covers Software Design and Implementation, and had enrollment of around 220 students.
-  \begin{overview}
-    \item Led discussion sections of 20+ students and taught fundamentals on
-          software development
-    \item Assisted students by hosting office hours and answering questions on 
-          course discussion board
-    \item Attended staff meetings and assisted in preparing lecture and 
-          discussion section material
-    \item Coordinated with instructor and other staff in preparing and grading 
-          student assignments and exams
-  \end{overview}
+\institution{University of Washington}{
+  \position
+  {CSE 331 Teaching Assistant}
+  {April 2019 - Present}
+  {Seattle, WA, USA}
+  {cs.uw.edu/331}
+  {
+    % CSE 331 covers Software Design and Implementation, and normally has enrollment of around 220 students.
+    \begin{overview}
+      \item Led discussion sections of 20+ students and taught fundamentals on
+        software development
+      \item Assisted students by hosting office hours and answering questions on 
+        course discussion board
+      \item Attended staff meetings and assisted in preparing lecture and 
+        discussion section material
+      \item Coordinated with instructor and other staff in preparing and grading 
+        student assignments and exams
+    \end{overview}
+  }
 }
 
-\job
-{Growth Engineering Intern}
-{Choco Communications GmbH}
-{July 2018 - September 2018}
-{Berlin, Germany}
-{choco.com}
-{
-  Choco is a startup with a peer to peer platform for restaurants ordering 
-  products from food suppliers.
-  \begin{overview}
-    \item Implemented modules using node.js that automate data conversion between 
-          different formats, such as localized PDF invoices and SMS 
-          notifications for clients, and Slack/analytics for internal usage
-    \item Built an extensible framework for automated chatbots using node.js 
-          and the XMPP protocol to help with customer support and onboarding
-  \end{overview}
+\institution{Choco}{
+  \position
+  {Growth Engineering Intern}
+  {July 2018 - September 2018}
+  {Berlin, DE}
+  {choco.com}
+  {
+    % Choco is a startup with a peer to peer platform for restaurants ordering 
+    % products from food suppliers.
+    \begin{overview}
+      \item Implemented modules using node.js that automate data conversion between 
+        different formats, such as localized PDF invoices and SMS 
+        notifications for clients, and Slack/analytics for internal usage
+      \item Built an extensible framework for automated chatbots using node.js 
+        and the XMPP protocol to help with customer support and onboarding
+    \end{overview}
+  }
 }
 
 \section{Projects}
 
 \project
-{Flashcard Study Buddy \blt Voice-Controlled App for Google Assistant}
+{Flashcard Study Buddy (Google Assistant Voice App)}
 {June 2017 - August 2017}
 {frankpoon.com/fsb}
 {
@@ -98,19 +112,19 @@
   allowed users to search for and test themslves verbally on flash cards using 
   the Quizlet REST API, which was shut down in January 2019.
   \begin{overview}
-    \item Integrated user input with Google's natural language processing engine 
-          DialogFlow
+    \item Connected user input with Google's natural language processing engine 
+      DialogFlow
     \item Wrote a webhook hosted on Google Firebase, using node.js, to process 
-          input and connect to Quizlet
+      input and connect to Quizlet
     \item Integrated OAuth 2.0 authentication protocol for users to use their 
-          Quizlet accounts safely and seamlessly.
+      Quizlet accounts seamlessly.
   \end{overview}
 }
 
 \section{Skills}
-\textbf{Programming Languages:} Java, Python, JavaScript, C/C++, bash, HTML, CSS
+\textbf{Programming Languages:} Java, Python, JavaScript, C/C++, bash, HTML, CSS, Kotlin
 
-\textbf{Technologies/Concepts:} REST/SOAP, node.js, React, OAuth, Agile/Scrum
+\textbf{Technologies/Concepts:} REST/SOAP, node.js, React, Angular, OAuth, Agile/Scrum
 
 \textbf{Tools:} git, AWS, Google Cloud, DialogFlow, Pytorch
 
