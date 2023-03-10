@@ -105,7 +105,7 @@
 }
       
 % Adds a job
-% Usage: \job{position}{timeframe}{location}{website}{overview}
+% Usage: \position{name}{timeframe}{location}{website}{overview}
 \newcommand{\position}[6]
 {
   \large \textbf{#1}
