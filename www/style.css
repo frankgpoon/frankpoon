@@ -1,17 +1,21 @@
 body {
-    background-color: #222;
-    color: #eee;
+  background-color: #222;
+  color: #eee;
 }
 
 a:hover {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .container {
-    padding-bottom: 1em;
-    padding-top: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
 }
 
 h1 {
-    text-transform: uppercase;
+  text-transform: uppercase;
+}
+
+h2 {
+  text-transform: lowercase;
 }
